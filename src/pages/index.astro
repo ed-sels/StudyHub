@@ -1,11 +1,81 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+// src/pages/index.astro
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudyHub — Master Your Study Goals</title>
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f9fafb;
+        color: #111827;
+      }
+      header {
+        background: #1f2937;
+        color: white;
+        padding: 2rem 1rem;
+        text-align: center;
+      }
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+      }
+      p.lead {
+        font-size: 1.2rem;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      main {
+        padding: 2rem 1rem;
+        display: grid;
+        gap: 2rem;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+      .feature {
+        background: white;
+        border-radius: 1rem;
+        padding: 1.5rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      }
+      .feature h2 {
+        margin-top: 0;
+        color: #2563eb;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to StudyHub</h1>
+      <p class="lead">Your all-in-one study companion built to keep you consistent, smart, and exam-ready.</p>
+    </header>
+
+    <main>
+      <section class="feature">
+        <h2>📅 Streak Savers</h2>
+        <p>Stay accountable and build daily momentum. Keep your study streak alive with intelligent reminders and progress tracking.</p>
+      </section>
+
+      <section class="feature">
+        <h2>🧠 Flashcards</h2>
+        <p>Memorize key facts faster using interactive flashcards designed for spaced repetition and long-term retention.</p>
+		<p style="text-align:center; margin-top: 1rem;">
+  		<a href="/flashcard-generator" style="background:#2563eb; color:white; padding:0.75rem 1.5rem; text-decoration:none; border-radius:0.5rem;">
+   		 Go to Flashcard Generator
+  		</a>
+		</p>
+
+      </section>
+
+      <section class="feature">
+        <h2>❓ Question Generator</h2>
+        <p>Automatically generate personalized questions from your study materials to test your understanding and prepare for exams effectively.</p>
+      </section>
+    </main>
+  </body>
+</html>

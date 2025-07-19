@@ -1,0 +1,57 @@
+---
+// src/pages/flashcard-generator.astro
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Flashcard Generator - StudyHub</title>
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        background: #f3f4f6;
+        margin: 0;
+        padding: 2rem;
+        color: #111827;
+      }
+      h1 {
+        color: #2563eb;
+        text-align: center;
+      }
+      form {
+        max-width: 500px;
+        margin: 2rem auto;
+        background: white;
+        padding: 2rem;
+        border-radius: 1rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      }
+      input[type="file"] {
+        display: block;
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+        font-size: 1rem;
+      }
+      button {
+        background: #2563eb;
+        color: white;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #1d4ed8;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Upload Your Study Material</h1>
+    <form method="post" enctype="multipart/form-data" action="/api/upload">
+        <label for="file">Choose a file (PDF, TXT, DOCX, PPT, PPTX):</label>
+        <input type="file" id="file" name="studyFile" accept=".pdf,.txt,.docx,.ppt,.pptx" required />
+        <button type="submit">Generate Flashcards</button>
+    </form>
+  </body>
+</html>
